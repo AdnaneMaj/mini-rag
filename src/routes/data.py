@@ -44,7 +44,6 @@ async def upload_data(request: Request, project_id: str, file: UploadFile,
             }
         )
 
-    project_dir_path = ProjectController().get_project_path(project_id=project_id)
     file_path, file_id = data_controller.generate_unique_filepath(
         orig_file_name=file.filename,
         project_id=project_id
